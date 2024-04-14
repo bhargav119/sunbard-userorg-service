@@ -71,7 +71,7 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
                 archiveArtifacts "metadata.json"
-                currentBuild.description = "${env.BUILD_TAG}"
+                setDescription("${env.BUILD_TAG}")
             }
         }
     }
