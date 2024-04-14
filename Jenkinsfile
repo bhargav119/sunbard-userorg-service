@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'sunbird'
+    }
     
     environment {
         JAVA_HOME = "${tool 'JDK'}"
